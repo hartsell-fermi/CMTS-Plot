@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 from matplotlib import gridspec
 import numpy as np
 
-datetype=1  #0 for interval, 1 for specified range
+datetype=0  #0 for interval, 1 for specified range
 
 if datetype==0:
     dur=int(1*86400) #duration in seconds, 86400 sec in day
@@ -18,9 +18,9 @@ elif datetype==1:
 vacparams={"T:VEBCG": "DS BL (VEBCG)",
 #    "T:VEBPG": "DS BL (VEBPG)"
 #    "T:VFBCG": "US BL (VFBCG)",
-#    "T:VCCG": "Coupler (VCCG)",
-#    "T:VEICCG": "DS Ins (VEICCG)",
-#    "T:VFICCG": "US Ins (VFICCG)",
+    "T:VCCG": "Coupler (VCCG)",
+    "T:VEICCG": "DS Ins (VEICCG)",
+    "T:VFICCG": "US Ins (VFICCG)",
 #    "T:VFIPG": "US Ins PG (VFIPG)",
 #    "T:VEIPG": "DS Ins PG (VEIPG)",
 #    "T:VEIRCG": "DS RIns (VEIRCG)",
@@ -31,9 +31,9 @@ vacparams={"T:VEBCG": "DS BL (VEBCG)",
     }
 
 tempparams={#"t:1ct114": "Cav 1",
-    #"t:5ct114": "Cav 5",
-    #"t:ct402": "Magnet",
-    #"t:ct512": "Shield",
+    "t:5ct114": "Cav 5",
+    "t:ct402": "Magnet",
+    "t:ct512": "Shield",
 #    "t:cpt602": "Cav Jacket Press"
 #    "T|VPMTOK": "Vacuum Permit",
 #    "t:7ct118": "Cav7COM118",
